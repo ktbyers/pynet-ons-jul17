@@ -1,0 +1,62 @@
+---
+
+# Dictionary is a device
+pynet_rtr1:
+  device_type: cisco_ios
+  ip: 184.105.247.70
+  username: pyclass
+  password: password
+  port: 22
+
+pynet_rtr2:
+  device_type: cisco_ios
+  ip: 184.105.247.71
+  username: pyclass
+  password: password
+
+arista_sw1:
+  device_type: arista_eos
+  ip: 184.105.247.72
+  username: pyclass
+  password: password
+  secret: ""
+  port: 22
+
+arista_sw2:
+  device_type: arista_eos
+  ip: 184.105.247.73
+  username: pyclass
+  password: password
+
+arista_sw3:
+  device_type: arista_eos
+  ip: 184.105.247.74
+  username: pyclass
+  password: password
+
+arista_sw4:
+  device_type: arista_eos
+  ip: 184.105.247.75
+  username: pyclass
+  password: password
+
+juniper_srx:
+  device_type: juniper
+  ip: 184.105.247.76
+  username: pyclass
+  password: password
+
+# Any list is group of devices
+cisco:
+  - pynet_rtr1
+  - pynet_rtr2
+
+arista:
+  - arista_sw1
+  - arista_sw2
+  - arista_sw3
+  - arista_sw4
+
+juniper:
+  - juniper_srx
+

@@ -1,0 +1,15 @@
+
+a. Create a branch in your lab environment
+b. Switch to this branch
+c. Add a file and commit this new file (in the new branch)
+d. Push the new branch up to GitHub
+e. Merge the new branch into the master branch
+
+f. [Optional] Fork my pynet-ons-mar17 repository; clone this repository to the
+   lab environment (your fork); commit a change to your fork; submit 
+   a pull request on this via GitHub.
+
+g. [Optional] Do a practice rebase. Rebase your pynet-ons-mar17 fork (created
+   in step f) based on any commits that I have made to my pynet-ons-mar17 
+   repository.
+

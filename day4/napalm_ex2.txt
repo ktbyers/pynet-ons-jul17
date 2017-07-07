@@ -1,0 +1,12 @@
+
+NAPALM Ex2
+-----------
+1. Construct a script that uses the get_lldp_neighbors() NAPALM method to retrieve
+   LLDP information from juniper1, juniper2, and pynet-rtr1.
+
+    juniper1 = juniper1.twb-tech.com
+    juniper2 = juniper1.twb-tech.com
+    pynet-rtr1 = Cisco Rtr at 184.105.247.70
+
+
+   Use pprint to print this LLDP information to the screen.

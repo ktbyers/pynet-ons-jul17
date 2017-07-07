@@ -1,0 +1,9 @@
+
+Show Version Ex1
+----------------
+
+a. Read a show version output from a router (in a file)
+b. Find the router serial number in the output
+c. Parse the serial number and return it as a variable. Use .split() and substr in str to 
+   accomplish this
+

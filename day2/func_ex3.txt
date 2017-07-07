@@ -1,0 +1,12 @@
+
+Functions Ex3
+--------------
+
+Based on your earlier exercise where you parsed the serial number from
+ show_version
+  
+a. Create two functions
+b. Function1 opens the file and returns all of the data in the file as a text 
+   string. This function should take one argument (the filename).
+c. Function2 parses the show_version output and returns the serial number
+

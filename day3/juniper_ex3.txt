@@ -1,0 +1,16 @@
+
+Use the custom RPC method discovered in the previous exercise (get_lldp_neighbors_information)
+
+Using this method retrieve the LLDP neighbor XML data from one of the vMX routers and use
+xmltodict() to convert this XML data to a Python dictionary.
+
+
+You probably need code similar to the following.
+
+    import xmltodict
+    my_dict = xmltodict.parse(etree.tostring(xml_out, encoding='unicode'))
+
+Where 'xml_out' is the XML object retrieved from the get_lldp_neighbors_information call.
+
+
+From the data retrieved back print out the the local_port, remote_port, and remote_system.

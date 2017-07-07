@@ -1,0 +1,19 @@
+key1: val1
+key2: val2
+key3: val3
+key4:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- whatever
+- some thing
+key5: false
+key6:
+  name: Kirk Byers

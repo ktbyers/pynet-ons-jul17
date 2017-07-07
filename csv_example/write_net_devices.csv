@@ -1,0 +1,8 @@
+device_name,device_type,host,username,password
+pynet-rtr1,cisco_ios,184.105.247.70,pyclass,my_pass
+pynet-rtr2,cisco_ios,184.105.247.71,pyclass,my_pass
+pynet-sw1,arista_eos,184.105.247.72,pyclass,my_pass
+pynet-sw2,arista_eos,184.105.247.73,pyclass,my_pass
+pynet-sw3,arista_eos,184.105.247.74,pyclass,my_pass
+pynet-sw4,arista_eos,184.105.247.75,pyclass,my_pass
+pynet-jnpr-srx1,juniper_junos,184.105.247.76,pyclass,my_pass

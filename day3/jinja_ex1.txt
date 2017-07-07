@@ -1,0 +1,12 @@
+
+Using the file 'juniper_bgp.j2'
+
+Use Jinja2 templating to populate the variables and build out the specified section of the configuration.
+
+neighbor1_ip = 10.100.1.7
+neighbor1_as = 22
+neighbor2_ip = 10.100.99.1
+neighbor2_as = 17
+neighbor3_ip = 10.100.8.1
+neighbor3_as = 88
+

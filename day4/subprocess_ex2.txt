@@ -1,0 +1,10 @@
+Expand upon the previous subprocess exercise to cause an email to be
+sent changes occur to the files. The email notification should contain
+a diff of the changes that occurred.
+
+The changed files should also be commited to git.
+
+You can use the following git command to get the changes between the 
+last two commits:
+
+    git log -p -1

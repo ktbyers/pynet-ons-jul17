@@ -1,0 +1,11 @@
+protocols {
+    bgp {
+        group external-peers {
+            type external;
+            peer-as {{ peer_as }};
+            neighbor {{ neighbor1 }};
+            neighbor {{ neighbor2 }};
+            neighbor {{ neighbor3 }};
+        }
+    }
+}

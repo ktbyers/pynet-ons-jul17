@@ -1,0 +1,9 @@
+Strings Ex2
+-----------
+
+Create a python script that prompts for an IP address.
+Use #! at top of file; make executable
+split on ‘.’      
+Print out four octets with column width of 12; left aligned.
+Check your code into github
+

@@ -1,0 +1,22 @@
+Use Jinja2 templating and PyEZ to configure BGP peering between juniper1 and
+juniper2.
+
+Your Jinja2 template file should look similar to the following:
+
+--------
+routing-options {
+    autonomous-system {{ local_as }};
+}
+protocols {
+    bgp {
+        group external-peers {
+            type external;
+                neighbor {{ neighbor_ip }} {
+                    peer-as {{ neighbor_as }};
+                }
+        }
+    }
+}
+--------
+
+Perform a diff operation before commiting your changes (on the staged candidate configuration).

@@ -1,0 +1,4 @@
+Multicast Entries
+ vlan    mac address     type    ports
+-------+---------------+-------+--------------------------------------------
+  11    ffff.ffff.ffff   system Gi2/4,Gi2/5,Gi2/8,Gi2/11,Gi2/12,Gi2/13,Gi2/19,Gi2/23,Gi2/25,Gi2/31,Gi2/33,Gi2/36,Gi2/39,Gi2/41,Gi2/42,Gi2/43,Gi2/47,Gi3/10,Gi3/15

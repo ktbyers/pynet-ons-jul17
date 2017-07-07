@@ -1,0 +1,10 @@
+
+Show IP BGP Parsing (optional)
+-------------------------------
+
+Read the ‘show_ip_bgp.txt’ file.
+
+Strip out the header information so you are just left with the routes
+Parse each BGP line such that you retrieve the prefix and the as_path.
+Save the prefix and as_path to a file.
+

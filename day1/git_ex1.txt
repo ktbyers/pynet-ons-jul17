@@ -1,0 +1,8 @@
+
+a. Create a GitHub account (if you don’t have one)
+b. Log into your lab environment
+c. Create a pynet_test repository on GitHub
+d. Clone it to the lab environment
+e. Add a file; commit it. Push change up to GitHub
+f. Modify the README file in GitHub; pull it into the lab environment.
+

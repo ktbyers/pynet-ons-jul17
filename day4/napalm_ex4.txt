@@ -1,0 +1,14 @@
+Using NAPALM library perform a complete configuration replace operation
+on the juniper3 router.
+
+When doing this you should only change the interface IP addresses of the following
+interfaces, nothing else.
+
+    ge-0/0/0
+    ge-0/0/1
+    ge-0/0/2
+    ge-0/0/3
+
+Perform a compare_config() operation before performing a commit_config() to ensure 
+you are only changing the above interface IPs and nothing else.
+

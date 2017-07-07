@@ -1,0 +1,27 @@
+
+Subprocess ex1
+---------------
+
+Use subprocess to check the config files in ~/CFGS into git
+
+Assumes 'git init' is done manually.
+-----------
+cd ~/CFGS
+git init
+
+
+Commands to be done using subprocess.
+----------
+git add *.cfg
+git commit -m "Add configs"
+
+
+You will also need to change dir into the ~/CFGS dir
+---------
+os.chdir(CFGS_DIR)
+
+
+You can use 'git log' to verify your commits. You probably
+will need to manually change one of the config files (so that
+git will have something to check in).
+

@@ -1,0 +1,18 @@
+Construct a spreadsheet that contains ten network devices (use Excel or Google 
+Sheets). The CSV should at a minimum have the following columns: device_name, 
+device_type, host, username, password. You can have additional columns. 
+
+Save this spreadsheet as a CSV.
+
+Use Python to process the file, each row should return a dictionary where the 
+dictionary key is the entry from the first line. 
+
+For example:
+------------------
+device_name, device_type, host, username, password
+device1, cisco_nxos, 1.1.1.1, admin, admin
+device2, cisco_iosxr, 2.2.2.2, admin, admin
+
+
+Above the dictionary keys would be 'device_name', 'device_type', 'host', 
+'username', and 'password' (i.e. the values from the header line).

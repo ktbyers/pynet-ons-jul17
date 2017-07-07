@@ -1,0 +1,24 @@
+interfaces {
+    ge-0/0/2 {
+        unit 0 {
+            replace:
+            family inet {
+                address {{ ge_ip }}/{{ ge_netmask }};
+            }
+        }
+    }
+}
+
+routing-options {
+    autonomous-system {{ local_as }};
+}
+protocols {
+    bgp {
+        replace:
+        group external-peers {
+            type external;
+            peer-as {{ peer_as }};
+            neighbor {{ peer_ip }};
+        }
+    }
+}

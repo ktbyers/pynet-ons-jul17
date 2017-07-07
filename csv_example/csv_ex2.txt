@@ -1,0 +1,4 @@
+
+Expand on exercise1 except establish a Netmiko SSH connection using the CSV file
+information. In this exercise your device_type, ip, username, password will need
+to be the proper values (given the device you are connecting to).

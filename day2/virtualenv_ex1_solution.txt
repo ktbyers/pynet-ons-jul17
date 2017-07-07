@@ -1,0 +1,52 @@
+$ cd ~
+$ mkdir VENV
+$ cd VENV
+
+# Exit current virtualenv
+$ deactivate
+
+# Create new virtualenv
+$ virtualenv -p /usr/bin/python27 pynet_test
+Running virtualenv with interpreter /usr/bin/python27
+New python executable in pynet_test/bin/python27
+Also creating executable in pynet_test/bin/python
+Installing setuptools, pip...done.
+
+
+# Activate new virtualenv
+$ source ~/VENV/pynet_test/bin/activate
+
+$ pip list
+You are using pip version 6.0.8, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+pip (6.0.8)
+setuptools (12.0.5)
+
+
+# Install netmiko package (and dependencies) 
+$ pip install netmiko
+...output omitted
+
+
+# List current packages
+$ pip list
+You are using pip version 6.0.8, however version 9.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+asn1crypto (0.22.0)
+cffi (1.9.1)
+cryptography (1.8.1)
+enum34 (1.1.6)
+idna (2.5)
+ipaddress (1.0.18)
+netmiko (1.2.8)
+packaging (16.8)
+paramiko (2.1.2)
+pip (6.0.8)
+pyasn1 (0.2.3)
+pycparser (2.17)
+pyparsing (2.2.0)
+PyYAML (3.12)
+scp (0.10.2)
+setuptools (12.0.5)
+six (1.10.0)
+

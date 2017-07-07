@@ -1,0 +1,12 @@
+protocols {
+    bgp {
+        group external-peers {
+            type external;
+            {% for neighbor_ip, neighbor_as in my_list %}
+                neighbor {{ neighbor_ip }} {
+                    peer-as {{ neighbor_as }};
+                }
+            {% endfor %}
+        }
+    }
+}

@@ -1,0 +1,28 @@
+
+Virtualenv Ex1
+----------
+
+1. Make a directory named VENV in your home directory:
+
+   cd ~
+   mkdir VENV
+
+2. cd into this VENV directory
+
+    cd VENV
+
+3. Exit your current virtualenv using the 'deactivate' command.
+
+4. Create a new python27 virtualenv named 'pynet_test'
+
+    virtualenv -p /usr/bin/python27 pynet_test
+
+5. Activate that virtualenv using:
+
+    source ~/VENV/pynet_test/bin/activate
+
+6. Execute the 'pip list' command to make sure you have a blank virtual environment.
+
+7. Use 'pip install netmiko' to reinstall the netmiko library.
+
+8. View 'pip list' again to see what is now installed.

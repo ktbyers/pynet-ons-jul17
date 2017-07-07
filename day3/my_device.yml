@@ -1,0 +1,5 @@
+---
+- device_name: juniper1
+  device_type: juniper_junos
+  host: juniper1.twb-tech.com
+  username: pyclass

@@ -1,0 +1,6 @@
+
+CiscoConfParse Ex2
+-------------------
+
+Use the ciscoconfparse library to find the crypto maps that are using pfs group2
+

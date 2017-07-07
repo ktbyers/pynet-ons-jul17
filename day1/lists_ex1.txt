@@ -1,0 +1,9 @@
+Lists Ex1
+----------
+
+a. Create a list with five strings
+b. Use append to add two strings to the list
+c. Use pop to remove the first element
+d. find the length of the list
+e. sort the list
+

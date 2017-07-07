@@ -1,0 +1,22 @@
+Using Juniper's Conf format in an external file, configure the ge-0/0/2 interface on the vMX1
+router to be 10.100.1.1/24.
+
+Note, you will need to use `merge=False`. To ensure you replace any existing IP address.
+
+cfg.load(path="configure_ip.conf", format="text", merge=False)
+
+This will also require that you use the 'replace:' keyword in your configuration stanza
+
+interfaces {
+    ge-0/0/2 {
+        unit 0 {
+            replace:
+            family inet {
+                address 10.100.1.1/24;
+            }
+        }
+    }
+}
+
+Be sure that you perform a diff() operation and verify your change prior to performing a commit().
+

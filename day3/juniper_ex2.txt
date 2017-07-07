@@ -1,0 +1,13 @@
+Manually SSH to one of the vMX routers and execute:
+
+  show lldp neighbors | display xml rpc
+
+From this determine the Junos XML request tag. Use this XML request tag to create a custom RPC
+request to one of vMX routers.
+
+Print the XML retrieved from this to screen. You will probably need the following code to complete
+this (xml_out is the XML object retrieved using PyEZ and the custom XML request tag).
+
+  from lxml import etree
+  print(etree.tostring(xml_out, encoding='unicode'))
+

@@ -1,0 +1,9 @@
+
+Netmiko Ex2
+-----------
+
+a. Connect to the juniper1 and juniper2 
+b. Configure + commit the following change to the two routers.
+
+    set system syslog file messages any error
+

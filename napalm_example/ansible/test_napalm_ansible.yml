@@ -1,0 +1,32 @@
+---
+- name: NAPALM gather information on EOS
+  hosts: pynet-sw1
+  tasks:
+    - name: Gather information
+      napalm_get_facts:
+        hostname: "{{ eapi_hostname }}"
+        username: "{{ eapi_username }}"
+        password: "{{ eapi_password }}"
+        dev_os: eos
+        filter: [facts, interfaces, bgp_neighbors]
+      register: result
+      tags: facts
+
+    - name: Debuggging
+      debug: var=result
+      tags: facts
+
+- name: NAPALM vlan configuration
+  hosts: pynet-sw1
+  tasks:
+    - napalm_install_config:
+        hostname: "{{ eapi_hostname }}"
+        username: "{{ eapi_username }}"
+        password: "{{ eapi_password }}"
+        dev_os: eos
+        config_file: pynet-sw1-merge.cfg
+        commit_changes: True
+        replace_config: False
+        get_diffs: True
+        diff_file: "{{ eapi_hostname }}.diff"
+      tags: config
