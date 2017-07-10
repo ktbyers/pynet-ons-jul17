@@ -4,7 +4,7 @@ Use processes and Netmiko to connect to each of the devices. Execute
 'show version' on each device. Use a queue to pass the output back to the parent process.
 Record the amount of time required to do this.
 '''
-
+from __future__ import print_function, unicode_literals
 from multiprocessing import Process, Queue
 
 from datetime import datetime
@@ -47,11 +47,11 @@ def main():
 
     while not output_q.empty():
         my_dict = output_q.get()
-        for k, val in my_dict.iteritems():
-            print k
-            print val
+        for k, val in my_dict.items():
+            print(k)
+            print(val)
 
-    print "\nElapsed time: " + str(datetime.now() - start_time)
+    print("\nElapsed time: " + str(datetime.now() - start_time))
 
 if __name__ == "__main__":
     main()

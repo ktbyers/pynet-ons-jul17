@@ -3,7 +3,7 @@
 Use processes and Netmiko to connect to each of the devices. Execute
 'show version' on each device. Record the amount of time required to do this.
 '''
-
+from __future__ import print_function, unicode_literals
 from multiprocessing import Process
 
 from datetime import datetime
@@ -13,11 +13,11 @@ from my_devices import device_list as devices
 def show_version(a_device):
     '''Execute show version command using Netmiko.'''
     remote_conn = ConnectHandler(**a_device)
-    print
-    print '#' * 80
-    print remote_conn.send_command_expect("show version")
-    print '#' * 80
-    print
+    print()
+    print('#' * 80)
+    print(remote_conn.send_command_expect("show version"))
+    print('#' * 80)
+    print()
 
 def main():
     '''
@@ -33,10 +33,10 @@ def main():
         procs.append(my_proc)
 
     for a_proc in procs:
-        print a_proc
+        print(a_proc)
         a_proc.join()
 
-    print "\nElapsed time: " + str(datetime.now() - start_time)
+    print("\nElapsed time: " + str(datetime.now() - start_time))
 
 if __name__ == "__main__":
     main()
