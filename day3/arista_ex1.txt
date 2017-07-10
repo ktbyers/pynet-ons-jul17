@@ -1,0 +1,9 @@
+
+Arista Ex1
+-----------
+Use eapi to retrieve 'show ip route' from your arista switch.
+
+From the returned data structure retrieve the prefixes, the output 
+interfaces, and the next hops (if available).
+
+Print these routes and the associated information to stdout.

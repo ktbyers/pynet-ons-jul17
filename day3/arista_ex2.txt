@@ -1,0 +1,9 @@
+
+Arista Ex2
+----------
+
+Execute ‘show interfaces’ on the Arista switch using eapi.
+
+Extract the interfaceCounters inOctets/outOctets for all the interfaces 
+that have this information.
+
