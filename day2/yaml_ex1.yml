@@ -1,0 +1,10 @@
+---
+- 0
+- some string
+- true
+- off
+- some other string
+- key1: value1
+  key2: value2
+  key3: value3
+- last string

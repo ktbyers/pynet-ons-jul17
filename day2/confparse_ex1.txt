@@ -1,0 +1,11 @@
+
+CiscoConfParse Ex1
+-------------------
+
+Write a Python program using ciscoconfparse that parses the 'cisco_ipsec.txt'
+config file. Note, this config file is not fully valid (i.e. parts of the
+configuration are missing).
+
+The script should find all of the crypto map entries in the file (lines that
+begin with 'crypto map CRYPTO') and print out the children of each crypto map.
+

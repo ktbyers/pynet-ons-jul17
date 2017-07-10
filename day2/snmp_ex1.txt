@@ -1,0 +1,10 @@
+
+SNMP Ex1
+---------
+
+Create a script that connects to both routers (pynet-rtr1 and pynet-rtr2) and
+prints out both the MIB2 sysName and sysDescr.
+
+SYS_DESCR = '1.3.6.1.2.1.1.1.0'
+SYS_NAME = '1.3.6.1.2.1.1.5.0'
+

@@ -1,0 +1,13 @@
+
+SNMP query all of the interfaces on the pynet-rtr1 using SNMPv3.
+Get the interface description and the in_octets/out_octets
+
+Relevant Base OIDs are:
+ 
+IFDESCR = '1.3.6.1.2.1.2.2.1.2.'
+IFINOCTETS = '1.3.6.1.2.1.2.2.1.10.'
+IFOUTOCTETS = '1.3.6.1.2.1.2.2.1.16.'
+
+The last digit of the OID will range from 1 to 7 (for the different interfaces on this
+device).
+
