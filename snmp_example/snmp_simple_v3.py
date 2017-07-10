@@ -3,6 +3,8 @@
 Create a script that connects to both routers (pynet-rtr1 and pynet-rtr2) and
 prints out both the MIB2 sysName and sysDescr.
 '''
+from __future__ import print_function
+from __future__ import unicode_literals
 from getpass import getpass
 import snmp_helper
 
@@ -14,8 +16,12 @@ def main():
     Create a script that connects to both routers (pynet-rtr1 and pynet-rtr2) and
     prints out both the MIB2 sysName and sysDescr.
     '''
-    ip_addr1 = raw_input("pynet-rtr1 IP address: ")
-    ip_addr2 = raw_input("pynet-rtr2 IP address: ")
+    try:
+        ip_addr1 = raw_input("pynet-rtr1 IP address: ")
+        ip_addr2 = raw_input("pynet-rtr2 IP address: ")
+    except NameError:
+        ip_addr1 = input("pynet-rtr1 IP address: ")
+        ip_addr2 = input("pynet-rtr2 IP address: ")
     my_key = getpass(prompt="Auth + Encryption Key: ")
 
     a_user = 'pysnmp'
@@ -26,13 +32,13 @@ def main():
     pynet_rtr1 = (ip_addr1, 161)
     pynet_rtr2 = (ip_addr2, 161)
     for a_device in (pynet_rtr1, pynet_rtr2):
-        print "\n*********************"
+        print("\n*********************")
         for oid in (SYS_NAME, SYS_DESCR):
             snmp_data = snmp_helper.snmp_get_oid_v3(a_device, snmp_user, oid)
             output = snmp_helper.snmp_extract(snmp_data)
-            print output
-        print "*********************"
-    print
+            print(output)
+        print("*********************")
+    print()
 
 if __name__ == "__main__":
     main()

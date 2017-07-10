@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-
+from __future__ import print_function, unicode_literals
 import json
 
-my_list = range(10)
+my_list = list(range(10))
 my_list.append('whatever')
 my_list.append('some thing')
 
@@ -14,8 +14,8 @@ my_dict = {
 my_dict['key4'] = my_list
 my_dict['key5'] = False
 
-print my_dict
-print json.dumps(my_dict)
+print(my_dict)
+print(json.dumps(my_dict))
 
 with open("my_file.json", "w") as f:
     json.dump(my_dict, f)
