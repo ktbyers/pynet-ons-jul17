@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function, unicode_literals
 from netmiko import ConnectHandler
 import threading
 from my_devices import device_list as devices
@@ -9,11 +10,11 @@ def remote_cmd(a_device, cmd=""):
     Execute show version command using Netmiko
     '''
     remote_conn = ConnectHandler(**a_device)
-    print
-    print '#' * 80
-    print remote_conn.send_command(cmd)
-    print '#' * 80
-    print
+    print()
+    print('#' * 80)
+    print(remote_conn.send_command(cmd))
+    print('#' * 80)
+    print()
 
 def main():
     for a_device in devices:
