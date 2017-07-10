@@ -1,5 +1,5 @@
 #/usr/bin/env python
-
+from __future__ import print_function, unicode_literals
 from getpass import getpass
 import time
 import paramiko
@@ -23,4 +23,4 @@ output = remote_conn.recv(10000)
 remote_conn.send("show ip int brief\n")
 time.sleep(1)
 output = remote_conn.recv(10000)
-print output
+print(output)
