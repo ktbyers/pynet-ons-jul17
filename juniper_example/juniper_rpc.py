@@ -11,20 +11,20 @@ from getpass import getpass
 from pprint import pprint
 import time
 
-juniper_mx = { 
-    "host": "juniper1.twb-tech.com",
+juniper_srx = { 
+    "host": "srx1.twb-tech.com",
     "user": "pyclass",
     "password": getpass(),
 }   
 
-a_device = Device(**juniper_mx)
+a_device = Device(**juniper_srx)
 a_device.open()
 
 if True:
     show_version = a_device.rpc.get_software_information()
-#    print(etree.tostring(show_version, encoding='unicode'))
-    show_version_json = a_device.rpc.get_software_information({'format':'json'})
-    pprint(show_version_json)
+    print(etree.tostring(show_version, encoding='unicode'))
+#    show_version_json = a_device.rpc.get_software_information({'format':'json'})
+#    pprint(show_version_json)
 
 if False:
     arp = a_device.rpc.get_arp_table_information()
@@ -34,8 +34,9 @@ if False:
 
 if False:
     route = a_device.rpc.get_route_information()
-    print(etree.tostring(route, encoding='unicode'))
+#    print(etree.tostring(route, encoding='unicode'))
     my_dict = xmltodict.parse(etree.tostring(route, encoding='unicode'))
+    print(my_dict)
 
 
 
