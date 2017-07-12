@@ -5,7 +5,7 @@ NAPALM Ex2
    LLDP information from juniper1, juniper2, and pynet-rtr1.
 
     juniper1 = juniper1.twb-tech.com
-    juniper2 = juniper1.twb-tech.com
+    juniper2 = juniper2.twb-tech.com
     pynet-rtr1 = Cisco Rtr at 184.105.247.70
 
 

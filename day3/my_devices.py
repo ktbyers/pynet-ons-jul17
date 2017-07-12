@@ -8,69 +8,64 @@ pynet-sw4  (Arista EOS) 184.105.247.75
 juniper-srx             184.105.247.76
 """
 from getpass import getpass
-password = getpass("Enter standard password: ")
-
-cisco_rtr1 = dict(
-    hostname='184.105.247.70',
-    device_type='ios',
-    username='pyclass',
-    password=password,
-    optional_args = {}
-)
-
-cisco_rtr2 = dict(
-    hostname='184.105.247.71',
-    device_type='ios',
-    username='pyclass',
-    password=password,
-    optional_args = {}
-)
-
-arista_sw1 = dict(
-    hostname='184.105.247.72',
-    device_type='eos',
-    username='pyclass',
-    password=password,
-    optional_args = {}
-)
-
-arista_sw2 = dict(
-    hostname='184.105.247.73',
-    device_type='eos',
-    username='pyclass',
-    password=password,
-    optional_args = {}
-)
-
-juniper_srx = dict(
-    hostname='184.105.247.76',
-    device_type='junos',
-    username='pyclass',
-    password=password,
-    optional_args = {}
-)
-
-juniper1 = dict(
-    hostname='juniper1.twb-tech.com',
-    device_type='junos',
-    username='pyclass',
-    password=password,
-    optional_args = {}
-)
-
-juniper2 = dict(
-    hostname='juniper2.twb-tech.com',
-    device_type='junos',
-    username='pyclass',
-    password=password,
-    optional_args = {}
-)
+#password = getpass("Enter standard password: ")
+std_pwd = getpass("Enter standard password: ")
+  
+pynet_rtr1 = {
+     'device_type': 'cisco_ios',
+     'ip': '184.105.247.70',
+     'username': 'pyclass',
+     'password': std_pwd,
+}
+  
+pynet_rtr2 = {
+     'device_type': 'cisco_ios',
+     'ip': '184.105.247.71',
+     'username': 'pyclass',
+     'password': std_pwd,
+}
+  
+pynet_sw1 = {
+     'device_type': 'arista_eos',
+     'ip': '184.105.247.72',
+     'username': 'pyclass',
+     'password': std_pwd,
+}
+  
+pynet_sw2 = {
+     'device_type': 'arista_eos',
+     'ip': '184.105.247.73',
+     'username': 'pyclass',
+     'password': std_pwd,
+}
+  
+pynet_sw3 = {
+     'device_type': 'arista_eos',
+     'ip': '184.105.247.74',
+     'username': 'pyclass',
+     'password': std_pwd,
+}
+  
+pynet_sw4 = {
+     'device_type': 'arista_eos',
+     'ip': '184.105.247.75',
+     'username': 'pyclass',
+     'password': std_pwd,
+}
+ 
+juniper_srx = {
+     'device_type': 'juniper_junos',
+     'ip': '184.105.247.76',
+     'username': 'pyclass',
+     'password': std_pwd,
+}
 
 device_list = [
-        cisco_rtr1,
-        cisco_rtr2,
-        arista_sw1,
-        arista_sw2,
+        pynet_rtr1,
+        pynet_rtr2,
+        pynet_sw1,
+        pynet_sw2,
+        pynet_sw3,
+        pynet_sw4,
         juniper_srx,
 ]
-

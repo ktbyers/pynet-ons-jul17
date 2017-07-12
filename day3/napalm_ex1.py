@@ -2,7 +2,7 @@
 from pprint import pprint as pp
 
 from napalm_base import get_network_driver
-from my_devices import device_list
+from my_devices_na import device_list
 
 def main():
     for a_device in device_list:
