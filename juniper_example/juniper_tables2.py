@@ -7,7 +7,7 @@ from getpass import getpass
 from pprint import pprint
 
 juniper_srx = {
-    "host": "juniper1.twb-tech.com",
+    "host": "srx1.twb-tech.com",
     "user": "pyclass",
     "password": getpass(),
 }
