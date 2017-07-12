@@ -4,7 +4,7 @@ from getpass import getpass
 from pprint import pprint as pp
 from napalm_base import get_network_driver
 
-host = 'juniper3.twb-tech.com'
+host = 'juniper1.twb-tech.com'
 username = 'pyclass'
 password = getpass()
 optional_args = {}
@@ -15,7 +15,7 @@ device.open()
 
 print()
 print(">>>Load config change (replace)")
-device.load_replace_candidate(filename='juniper3.conf')
+device.load_replace_candidate(filename='juniper1.conf')
 print(device.compare_config())
 prompt = raw_input("Continue (y/n): ")
 if 'y' in prompt.lower():

@@ -2,7 +2,7 @@
 from pprint import pprint as pp
 
 from napalm_base import get_network_driver
-from my_devices import cisco_rtr1, juniper1
+from my_devices_na import cisco_rtr1, juniper1
 
 merge_files = {
     'cisco': 'cisco_merge.txt',

@@ -2,7 +2,7 @@
 from pprint import pprint as pp
 
 from napalm_base import get_network_driver
-from my_devices import juniper1, juniper2, cisco_rtr1
+from my_devices_na import juniper1, juniper2, cisco_rtr1
 
 def main():
     for a_device in (juniper1, juniper2, cisco_rtr1):
