@@ -3,11 +3,16 @@ from __future__ import print_function
 
 from jnpr.junos import Device
 from lxml import etree
+from getpass import getpass
 
-from my_devices import juniper2 as juniper_mx
+juniper_srx = {
+    "host": "srx1.twb-tech.com",
+    "user": "pyclass",
+    "password": getpass(),
+}
 
 if __name__ == "__main__":
-    a_device = Device(**juniper_mx)
+    a_device = Device(**juniper_srx)
     a_device.open()
 
     # Convert <get-lldp-neighbors-information> to method call

@@ -4,11 +4,15 @@ from jnpr.junos import Device
 from getpass import getpass
 from pprint import pprint
 
-from my_devices import juniper1, juniper2, juniper3, juniper4
+juniper_srx = {
+    "host": "srx1.twb-tech.com",
+    "user": "pyclass",
+    "password": getpass(),
+}
 
 print()
-for vmx in [juniper1, juniper2, juniper3, juniper4]:
-    a_device = Device(**vmx)
+for device in [juniper_srx]:
+    a_device = Device(**device)
     a_device.open()
     print()
     print("-" * 60)
