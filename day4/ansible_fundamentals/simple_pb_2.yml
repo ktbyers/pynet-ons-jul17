@@ -1,0 +1,6 @@
+---
+- name: simple_pb_2 exercise
+  hosts: cisco
+  tasks:
+    - debug:
+        msg: "{{ ansible_host }}"

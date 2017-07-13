@@ -1,0 +1,5 @@
+---
+- name: simple_pb_1 exercise
+  hosts: local
+  tasks:
+    - ping:

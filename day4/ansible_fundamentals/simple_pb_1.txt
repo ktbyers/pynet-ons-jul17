@@ -1,0 +1,4 @@
+
+Create a simple Playbook that uses the ./my-inventory file and calls the ping
+module. Verify you can execute this playbook successfully.
+
