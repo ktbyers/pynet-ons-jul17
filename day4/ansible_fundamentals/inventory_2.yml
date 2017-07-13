@@ -1,0 +1,6 @@
+---
+- name: Inventory exercise
+  hosts: cisco
+  tasks:
+    - debug:
+        msg: "{{ remote_as_number }}"

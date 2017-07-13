@@ -1,0 +1,6 @@
+
+Add two new variables directly into your playbook. These variables should correspond to
+ntp_server1 and ntp_server2 and have values of 20.20.20.20 and 20.20.20.30, respectively. Create
+a final playbook that properly prints out the following variables: inventory_hostname,
+ansible_host, local_as_number, remote_as_number, ntp_server1, and ntp_server2.
+

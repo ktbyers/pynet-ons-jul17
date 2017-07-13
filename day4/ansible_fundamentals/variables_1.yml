@@ -1,0 +1,30 @@
+---
+- name: Variable testing
+  hosts: cisco
+  vars:
+    ntp_server1: 20.20.20.20
+    ntp_server2: 20.20.20.30
+  tasks:
+    - name: inventory_hostname
+      debug:
+        msg: "{{ inventory_hostname }}"
+
+    - name: ansible_host
+      debug:
+        msg: "{{ ansible_host }}"
+
+    - name: local_as_number
+      debug:
+        msg: "{{ local_as_number }}"
+
+    - name: remote_as_number
+      debug:
+        msg: "{{ remote_as_number }}"
+
+    - name: ntp_server1
+      debug:
+        msg: "{{ ntp_server1 }}"
+
+    - name: ntp_server2
+      debug:
+        msg: "{{ ntp_server2 }}"
