@@ -1,0 +1,6 @@
+Construct a playbook using the ‘eos_command’ module and eAPI. Run 'show arp' 
+against the 'pynet-sw4' switch. From this output obtain the MAC address 
+corresponding to 10.220.88.1 and assign it to a variable named gateway_mac (use 
+the set_fact module here). Print the 'gateway_mac' to the screen. Hint: create 
+an intermediate variable that is the mac_table and then use with_items to loop 
+over this mac_table.
