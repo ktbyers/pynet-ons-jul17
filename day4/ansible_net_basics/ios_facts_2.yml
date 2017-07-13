@@ -1,0 +1,45 @@
+---
+
+- name: Gather facts (Cisco)
+  gather_facts: no
+  hosts: cisco
+  vars:
+    creds:
+        host: "{{ ansible_host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+
+  tasks:
+    - ios_facts:
+        provider: "{{ creds }}"
+      tags: 
+        - 2a
+        - 2b
+        - 2c
+        - 2d
+
+    - name: Exercise 2a
+      debug:
+        var: ansible_net_all_ipv4_addresses
+      when: ansible_net_all_ipv4_addresses[0] == '10.220.88.21'
+      tags: 2a
+
+    - name: Exercise 2b
+      debug:
+        msg: "{{ item.key }}"
+      with_dict: "{{ ansible_net_interfaces }}"
+      tags: 2b
+
+    - name: Exercise 2c
+      debug:
+        msg: "Active Interface: {{ item.key }}"
+      with_dict: "{{ ansible_net_interfaces }}"
+      when: item.value.operstatus == 'up'
+      tags: 2c
+
+    - name: Exercise 2d
+      debug:
+        var: ansible_net_model
+      when: "'881' in ansible_net_model"
+      tags: 2d
+

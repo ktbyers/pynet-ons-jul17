@@ -1,0 +1,14 @@
+
+Construct a playbook using the 'ios_command' module that executes ‘show arp’ on
+the two Cisco routers. ‘Register’ the output of ‘show arp’ and save this output
+to a show_arp variable. Print the show_arp variable to standard output.
+
+    a. From this show_arp output create a new variable using the 'set_fact' 
+       module (show_arp_new). This new variable should be equal to 
+       show_arp.stdout_lines[0]
+
+    b. Add a task to print this new variable 'show_arp_new' to the screen.
+
+    c. Add a new task to only print out the '10.220.88.1' line from the 
+       show_arp_new output (use with_items and when to accomplish this).
+

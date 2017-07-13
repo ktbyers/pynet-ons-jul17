@@ -1,0 +1,4 @@
+
+Construct a playbook using the ‘ios_facts’ module to connect to the two Cisco routers. Use the
+debug module to print out the two serial numbers.
+

@@ -1,0 +1,21 @@
+
+Construct a playbook using the ‘ios_facts’ module to connect to the two Cisco 
+routers. Using multiple debug tasks print out the following variables given the
+specified constraints
+
+  a. ansible_net_all_ipv4_addresses    [when the IP address is 10.220.88.21]
+  b. ansible_net_interfaces            [only print out the interface names]   
+  c. ansible_net_interfaces            [only print out the interface names that are up]
+  d. ansible_net_model                 [only when the model is a 881]
+
+
+Use tags so that you can execute any individual task. Note, the ios_facts task 
+will always need to run (so it will need all of the relevant tags which you 
+can do like follows):
+
+      tags: 
+        - task1
+        - task2
+        - task3
+        - task4
+ 
