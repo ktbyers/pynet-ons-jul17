@@ -1,0 +1,12 @@
+
+---
+- name: When Testing
+  hosts: local
+  vars:
+    my_str: whatever
+
+  tasks:
+    - name: Testing string equality
+      debug:
+        msg: whatever
+      when: my_str == 'whatever'
