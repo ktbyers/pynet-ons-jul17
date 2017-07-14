@@ -1,0 +1,28 @@
+---
+
+- name: Configure an ACL
+  gather_facts: no
+  hosts: pynet-rtr1
+  vars:
+    creds:
+      host: "{{ ansible_host }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+
+  tasks:
+    - name: Configure logging
+      ios_config:
+        provider: "{{ creds }}"
+        lines: 
+          - logging buffered 10000
+          - no logging console
+        match: line
+      notify: 
+        - write mem
+
+  handlers:
+    - name: write mem
+      ios_command:
+        provider: "{{ creds }}"
+        commands: "write mem"
+      changed_when: True
