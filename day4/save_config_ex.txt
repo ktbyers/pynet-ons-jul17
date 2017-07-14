@@ -1,0 +1,13 @@
+
+Save Config Ex1
+----------------
+
+Use ntc-ansible to save the config of all the Arista, NXOS, and Cisco
+IOS devices to ~/CFGS.
+
+Add tags so that you can backup only IOS, NXOS, or Arista
+
+Modify your subprocess exercise such that:
+1. You check your changes into git
+2. You email yourself the changes (git log -p -1)
+

@@ -1,0 +1,7 @@
+
+Ansible 2.1 ex1
+----------------
+Use the Ansible 2.1 ios_config module to create a five line access-list 
+on the two Cisco routers. Add a handler to call ios_command if the ios_config 
+module ‘changes’ when adding the access-list then have write mem be executed.
+

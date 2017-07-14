@@ -1,0 +1,3 @@
+Create an Ansible playbook that generates five switch configurations based upon
+the partial switch configuration specified in access_switch.j2.
+The hostname, ip_addr, and default_gateway should be unique for each switch.

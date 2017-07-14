@@ -1,0 +1,43 @@
+
+Expand upon macro ex1 to dynamically generate configurations where the interfaces
+are either trunks or access mode depending on variables.
+
+Your network device variables should have something similar to this:
+
+    with_items:
+      - {hostname: pynet-sw1, default_gateway: 10.10.10.1,
+         ip_addr: 10.10.10.10, netmask: 255.255.255.0, 
+         interfaces: [
+            {name: FastEthernet0, switchport_mode: access},
+            {name: FastEthernet1, switchport_mode: access},
+            {name: FastEthernet2, switchport_mode: access},
+            {name: FastEthernet3, switchport_mode: trunk},
+            {name: FastEthernet4, switchport_mode: trunk}
+        ]}  
+      - {hostname: pynet-sw2, default_gateway: 10.10.20.1,
+         ip_addr: 10.10.10.10, netmask: 255.255.255.0,
+         interfaces: [
+            {name: FastEthernet0, switchport_mode: access},
+            {name: FastEthernet1, switchport_mode: access},
+            {name: FastEthernet2, switchport_mode: access},
+            {name: FastEthernet3, switchport_mode: trunk},
+            {name: FastEthernet4, switchport_mode: trunk}
+        ]} 
+
+i.e. your variables should include a list of 'interfaces' that 
+are defined as either trunk or access mode.
+
+
+You then should have some logic where you check switchport_mode:
+-------------
+{% for intf in item.interfaces %}
+interface {{ intf.name }}
+ no ip address
+{% if intf.switchport_mode == 'trunk' %}
+ {{ intf_trunk(native_vlan=1, trunk_allowed_vlans="1,100") }}
+{% elif intf.switchport_mode == 'access' %}
+ {{ intf_access(vlan=100) }}
+{% endif %}
+!
+{% endfor %}
+-------------

@@ -1,0 +1,10 @@
+In the access_switch.j2 template use a Jinja2 for loop to create all of the 
+interfaces from FastEthernet 0/1 to FastEthernet 0/24.  Each of the interfaces
+should have the following configuration:
+
+>>>>
+interface FastEthernet 0/X                    # where X is the interface number
+ switchport access vlan {{item.access_vlan}}                
+ switchport mode access
+ spanning-tree portfast  
+>>>>

@@ -1,0 +1,8 @@
+Using Python retrieve the vendor, model, os_version, and uptime 
+from the four Arista switches. Save this information to your Django database.
+
+Repeat this process for the two Cisco routers.
+
+For reference see:
+./day2/show_ver_regex.py
+./day3/db_ex2.py

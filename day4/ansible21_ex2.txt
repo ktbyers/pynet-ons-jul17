@@ -1,0 +1,6 @@
+
+Ansible 2.1 ex2
+----------------
+Change the order of the ACL lines in your playbook from previous exercise. Use
+the match exact to push out the new order.
+

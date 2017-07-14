@@ -1,0 +1,11 @@
+
+NXOS-ansible ex1
+----------------
+
+1. Pair up with a partner.
+2. You will be assigned a switch (nxos1, nxos2, nxos3, nxos4)
+3. You will be assigned aspecific interface (Eth 2/1, Eth 2/2, Eth 2/3, Eth 2/4)
+4. Agree with your partner on a subnet and interface IP for each side.
+5. Use nxos_ip_interface to configure this IP/subnet on each side
+6. Use nxos_ping module to ping across this link
+

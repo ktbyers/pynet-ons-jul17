@@ -1,0 +1,35 @@
+---
+# Change the order of the ACL lines in your playbook. Use the
+# match exact to push out the new order.
+
+- name: Change ACL Order
+  gather_facts: no
+  hosts: cisco
+  vars:
+    creds:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+  tasks:
+    - name: Change ACL Order
+      ios_config:
+        provider: "{{ creds }}"
+        lines: 
+          - permit ip host 5.5.5.5 any log
+          - permit ip host 1.1.1.1 any log
+          - permit ip host 3.3.3.3 any log
+          - permit ip host 4.4.4.4 any log
+          - permit ip host 2.2.2.2 any log
+        parents: ["ip access-list extended TEST-ACL"]
+        before: ["no ip access-list extended TEST-ACL"]
+        replace: block
+        match: exact
+      notify: 
+        - write mem
+
+  handlers:
+    - name: write mem
+      ios_command:
+        commands: "write mem"
+        provider: "{{ creds }}"
+      changed_when: True

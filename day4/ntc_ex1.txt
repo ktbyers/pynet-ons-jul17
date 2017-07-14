@@ -1,0 +1,9 @@
+
+ntc-ansible ex1
+----------------
+
+Using the ntc_show_command and TextFSM templates retrieve the show feature
+output for all of the nxos switches.
+
+Print this output to stdout using Ansible.
+

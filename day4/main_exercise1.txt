@@ -1,0 +1,24 @@
+Build a configuration archiving system.
+
+Requirements.
+a. Use either Python or Ansible to retrieve the configs from the two Cisco 
+   routers, four Arista switches, Juniper SRX, and four Nexus devices.
+
+b. Using Python and Subprocess check these config files into GIT.
+
+c. Send an email notification if a change occurs. This email notification
+   should send the diff of the changes 'git log -p -1'
+
+d. Use ciscoconfparse to analyse the configs of the two Cisco routers. You 
+   should search for any 'crypto maps' in the config
+
+Optional - Pull the credentials for the devices from the database. This will
+require that you load the four Nexus devices into the database. If you are
+using Ansible this will require you construct a dynamic inventory script.
+Start with my dynamic inventory script as a starting point.
+
+
+For partial solution of this see:
+
+./day5/save_config_ex.py
+./day5/save_config_ex.yml

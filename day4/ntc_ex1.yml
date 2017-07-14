@@ -1,0 +1,16 @@
+---
+- name: NAPALM gather information on IOS
+  hosts: nxos
+  tasks:
+    - ntc_show_command:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        platform: cisco_nxos
+        connection: ssh
+        command: 'show feature'
+        template_dir: /home/kbyers/ntc-ansible/ntc-templates/templates/
+      register: output
+
+    - name: Print output
+      debug: msg="{{ output }}"

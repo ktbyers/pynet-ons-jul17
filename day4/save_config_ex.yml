@@ -1,0 +1,35 @@
+---
+- name: Save config Cisco IOS
+  hosts: cisco
+  tasks:
+    - ntc_save_config:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        platform: cisco_ios_ssh
+        local_file: "/home/kbyers/CFGS/{{ host }}.cfg"
+
+- name: Save config NXOS
+  hosts: nxos
+  tasks:
+    - ntc_save_config:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        platform: cisco_nxos_nxapi
+        port: 8443
+        transport: https
+        local_file: "/home/kbyers/CFGS/{{ host }}.cfg"
+
+- name: Save config Arista
+  hosts: arista
+  tasks:
+    - ntc_save_config:
+        host: "{{ eapi_hostname }}"
+        username: "{{ eapi_username }}"
+        password: "{{ eapi_password }}"
+        platform: arista_eos_eapi
+        port: "{{ eapi_port }}"
+        transport: https
+        local_file: "/home/kbyers/CFGS/{{ eapi_hostname }}.cfg"
+

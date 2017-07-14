@@ -1,0 +1,47 @@
+---
+- name: Configure IP Addresses
+  hosts: nxos3
+  tasks:
+    - name: Configure IP Addresses
+      nxos_ip_interface:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        transport: nxapi
+        interface: "{{ item.intf }}"
+        version: v4
+        state: present
+        addr: "{{ item.addr }}"
+        mask: 24
+      with_items:
+        - {intf: Ethernet 2/4, addr: 10.1.207.1}
+
+- name: Configure IP Addresses
+  hosts: nxos4
+  tasks:
+    - name: Configure IP Addresses
+      nxos_ip_interface:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        transport: nxapi
+        interface: "{{ item.intf }}"
+        version: v4
+        state: present
+        addr: "{{ item.addr }}"
+        mask: 24
+      with_items:
+        - {intf: Ethernet 2/4, addr: 10.1.207.2}
+
+    - name: Nexus Ping
+      nxos_ping:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        transport: nxapi
+        dest: 10.1.207.1
+        count: 5
+        vrf: default
+      register: output
+
+    - debug: msg="{{ output }}" 
