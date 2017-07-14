@@ -1,30 +1,27 @@
 ---
-# Use the Ansible 2.1 ios_config module to create a five line access-list
-# on the two Cisco routers. Add a handler to call ios_command if the ios_config
-# module ‘changes’ when adding the access-list then have write mem be executed.
 
-- name: Configure an ACL
+- name: Change ACL Order
   gather_facts: no
   hosts: cisco
   vars:
     creds:
-        host: "{{ host }}"
+        host: "{{ ansible_host }}"
         username: "{{ username }}"
         password: "{{ password }}"
   tasks:
-    - name: Configure ACL
+    - name: Change ACL Order
       ios_config:
         provider: "{{ creds }}"
         lines: 
+          - permit ip host 5.5.5.5 any log
           - permit ip host 1.1.1.1 any log
-          - permit ip host 2.2.2.2 any log
           - permit ip host 3.3.3.3 any log
           - permit ip host 4.4.4.4 any log
-          - permit ip host 5.5.5.5 any log
+          - permit ip host 2.2.2.2 any log
         parents: ["ip access-list extended TEST-ACL"]
         before: ["no ip access-list extended TEST-ACL"]
         replace: block
-        match: line
+        match: exact
       notify: 
         - write mem
 

@@ -8,9 +8,9 @@
   tasks:
     - name: Gather information
       napalm_get_facts:
-        hostname: "{{ eapi_hostname }}"
-        username: "{{ eapi_username }}"
-        password: "{{ eapi_password }}"
+        hostname: "{{ ansible_host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
         dev_os: eos
         filter: [facts, interfaces, bgp_neighbors]
       register: result

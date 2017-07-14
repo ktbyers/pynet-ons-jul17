@@ -1,0 +1,9 @@
+
+NAPALM-Ansible Ex3
+-------------------
+
+Use NAPALM-Ansible and templates to configure BGP on the Juniper routers. Run eBGP
+between the pair of routers.
+
+Use a NAPALM merge operation.
+
